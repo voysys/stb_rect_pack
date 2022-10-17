@@ -1,0 +1,15 @@
+[package]
+name = "stb_rect_pack"
+version = "0.1.0"
+edition = "2021"
+authors = ["Torkel Danielsson <torkel@voysys.se>"]
+license = "MIT OR Apache-2.0"
+description = "Wrapper over stb_rect_pack_sys, offering a cleaner abstraction than the bindgen generated interface"
+repository = "https://github.com/voysys/stb_rect_pack"
+documentation = "https://docs.rs/stb_rect_pack"
+keywords = ["stb_rect_pack", "rect", "pack"]
+readme = "README.md"
+
+[dependencies]
+stb_rect_pack_sys = "0.1"
+thiserror = "1.0"
