@@ -10,11 +10,23 @@ pub enum PackError {
     FailedToPack,
 }
 
+#[derive(Debug, Clone, PartialEq, Eq)]
 pub struct Rect {
     pub width: i32,
     pub height: i32,
     pub packed_top_left_x: i32,
     pub packed_top_left_y: i32,
+}
+
+impl Rect {
+    pub fn new(width: i32, height: i32) -> Rect {
+        Self {
+            width,
+            height,
+            packed_top_left_x: 0,
+            packed_top_left_y: 0,
+        }
+    }
 }
 
 /// Pack rects into width x height output rect.
@@ -83,32 +95,7 @@ pub fn pack(rects: &mut [Rect], width: i32, height: i32) -> Result<(), Box<dyn E
 #[test]
 fn test_basic_packing() {
     for _ in 0..10 {
-        let mut rects = vec![
-            Rect {
-                width: 1280,
-                height: 720,
-                packed_top_left_x: 0,
-                packed_top_left_y: 0,
-            },
-            Rect {
-                width: 1280,
-                height: 720,
-                packed_top_left_x: 0,
-                packed_top_left_y: 0,
-            },
-            Rect {
-                width: 1280,
-                height: 720,
-                packed_top_left_x: 0,
-                packed_top_left_y: 0,
-            },
-            Rect {
-                width: 1280,
-                height: 720,
-                packed_top_left_x: 0,
-                packed_top_left_y: 0,
-            },
-        ];
+        let mut rects = vec![Rect::new(1280, 720); 4];
 
         pack(&mut rects, 2560, 1440).unwrap();
 
