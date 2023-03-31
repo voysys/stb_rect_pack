@@ -4,9 +4,9 @@ version = 3
 
 [[package]]
 name = "bindgen"
-version = "0.61.0"
+version = "0.64.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8a022e58a142a46fea340d68012b9201c094e93ec3d033a944a24f8fd4a4f09a"
+checksum = "c4243e6031260db77ede97ad86c27e501d646a27ab57b59a574f725d98ab1fb4"
 dependencies = [
  "bitflags",
  "cexpr",
@@ -152,7 +152,7 @@ checksum = "43b2853a4d09f215c24cc5489c992ce46052d359b5109343cbafbf26bc62f8a3"
 
 [[package]]
 name = "stb_rect_pack"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "stb_rect_pack_sys",
  "thiserror",
@@ -160,9 +160,9 @@ dependencies = [
 
 [[package]]
 name = "stb_rect_pack_sys"
-version = "0.1.4"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "18e144c5e8d4de64ee0ec3f804dabd501a57f43cac2b494e8e2e936ee774b730"
+checksum = "9fe0f47593bc85e2418c82ed3af69abf467096371634e26a9ffd9e7364f9c5b4"
 dependencies = [
  "bindgen",
  "cc",
